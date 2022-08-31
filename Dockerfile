@@ -9,5 +9,5 @@ ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.82/bin/apache-tomcat-8.5.82.ta
 RUN tar -xvzf apache-tomcat-8.5.82.tar.gz
 RUN mv apache-tomcat-8.5.82/* /opt/tomcat
 EXPOSE 8080
-COPY ./petclinic.war /opt/tomcat/webapps
+COPY ./server.jar /opt/tomcat/webapps
 CMD ["/opt/tomcat/bin/startup.sh", "run"]
